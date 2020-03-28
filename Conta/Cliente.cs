@@ -5,42 +5,43 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Conta
 {
     public class Cliente
-    {   
-        public String tipoDePessoa;
-        public String nome;
-        public String sexo;
-        public String dataDeNascimento;
-        public String cpf;
-        public String rg;
-        public String entEmissao;
-        public String cep;
-        public String endereco;
-        public String cidade;
-        public String estado;
-        public String telefone;
-        public String email;
-        public Conta numero;
-        
-        
-        
-        public String toString(Cliente novo)
-        {
-            return "Conta tipo: " + novo.tipoDePessoa
-                + "\nNome do Titular: " + nome
-                + "\nData de Nascimento: " + dataDeNascimento
-                + "\nCPF: " + cpf
-                + "\nRG: " + rg + " " + entEmissao
-                + "\nSexo: " + sexo
-                + "\nCEP: " + cep
-                + "\nEndereço: " + endereco + ", " + cidade + "-" + estado
-                + "\nTelefone: " + telefone
-                + "\nEmail: " + email;
-                
-        }
+    {
+        public String TipoDePessoa { get; set; }
+        public String Nome { get; set; }
+        public String Sexo { get; set; }
+        public String DataDeNascimento { get; set; }
+        public String Cpf { get; set; }
+        public String Rg { get; set; }
+        public String Cep { get; set; }
+        public String Endereco { get; set; }
+        public String Cidade { get; set; }
+        public String Estado { get; set; }
+        public String Telefone { get; set; }
+        public String Email { get; set; }
+        public Contas Numero { get; set; }
 
+        public override string ToString()
+        {
+            return "Conta tipo: " + TipoDePessoa
+                + "\nNome do Titular: " + Nome
+                + "\nData de Nascimento: " + DataDeNascimento
+                + "\nCPF: " + Cpf
+                + "\nSexo: " + Sexo
+                + "\nCEP: " + Cep
+                + "\nEndereço: " + Endereco + ", " + Cidade + "-" + Estado
+                + "\nTelefone: " + Telefone
+                + "\nEmail: " + Email
+                + "\nDados da conta\nTipo de Conta: " + Numero.TipoDeConta
+                + "\nAgencia: " + Numero.Agencia + ", Conta: " + Numero.Conta
+                + "\nData de Criação: " + Numero.DataDeCriacaoConta
+                + "\nSaldo: " + Numero.Saldo;
+              
+        }
+        
         
         }
     }

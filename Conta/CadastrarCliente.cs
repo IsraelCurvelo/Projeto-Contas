@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Conta
 {
     public partial class CadastrarCliente : Form
@@ -56,47 +57,50 @@ namespace Conta
         private void Salvar_Click(object sender, EventArgs e)
         {
 
-            ArrayList listaClientes = new ArrayList();
+            List<Cliente> listaClientes = new List<Cliente>();
             Cliente novo = new Cliente();
-            Conta nova = new Conta();
+            Contas nova = new Contas();
+            novo.TipoDePessoa = cBoxTipoPessoa.Text;
+            novo.Nome = textNome.Text;
+            novo.DataDeNascimento = textDataDeNascimento.Text;
+            novo.Sexo = cBoxSexo.Text;
+            novo.Cpf = textCpf.Text;
+            novo.Rg = textRg.Text;            
+            novo.Cep = textCep.Text;
+            novo.Endereco =textEndereco.Text;
+            novo.Cidade = textCidade.Text;
+            novo.Estado = textEstado.Text;
+            novo.Telefone = textTelefone.Text;
+            novo.Email= textEmail.Text;
+            nova.TipoDeConta = cBoxTipoConta.Text;
+            nova.Agencia = textAgencia.Text;         
+            nova.Conta = textConta.Text;
+            nova.DataDeCriacaoConta = DateTime.Now;
 
-            novo.tipoDePessoa = cBoxTipoPessoa.Text;        
-            novo.nome = textNome.Text;
-            novo.dataDeNascimento = textDataDeNascimento.Text;
-            novo.sexo = cBoxSexo.Text;
-            novo.cpf = textCpf.Text;
-            novo.rg = textRg.Text;
-            novo.entEmissao = textEstadoEmissor.Text;
-            novo.cep = textCep.Text;
-            novo.endereco =textEndereco.Text;
-            novo.cidade = textCidade.Text;
-            novo.estado = textEstado.Text;
-            novo.telefone = textTelefone.Text;
-            novo.email= textEmail.Text;
-            nova.tipoDeConta = cBoxTipoConta.Text;
-            nova.agencia = textAgencia.Text;
-            nova.conta = textConta.Text;
-            nova.dataDeCriacaoConta = textDataCriacao.Text;
-            if (textSenha.Text == textConfirmarSenha.Text)
+            if (novo.TipoDePessoa != "" && novo.Nome != "" && novo.DataDeNascimento != "" && novo.Sexo != ""
+                    && novo.Cpf != "" && novo.Rg != "" && novo.Cep != "" && novo.Endereco != "" &&
+                novo.Cidade != "" && novo.Estado != "" && novo.Telefone != "" && novo.Email != "" &&
+                nova.TipoDeConta != "" && nova.Agencia != "" && nova.Conta != "" )
             {
-                nova.senha = textSenha.Text;
-                
-                MessageBox.Show(novo.toString(novo) + nova.toString(nova)+ "\nConfirma?");
 
-                novo.numero = nova;
-                listaClientes.Add(novo);
-                ConfirmacaoCadastro a = new ConfirmacaoCadastro();
-                a.Show();
-                MessageBox.Show("Cadastro realizado com sucesso.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Visible = false;
-            }
-            else
+                if (textSenha.Text == textConfirmarSenha.Text)
+                {
+                    nova.TrocarSenha(textSenha.Text);
+                    novo.Numero = nova;
+                    listaClientes.Add(novo);
+                    MessageBox.Show("Cadastro realizado com sucesso.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("A senha não confere!");
+                }
+
+
+            }else
             {
-                MessageBox.Show("A senha não confere!");
+                MessageBox.Show("Preencha todos os campos");
             }
-
-
-            
 
 
             

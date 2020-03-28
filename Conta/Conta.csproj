@@ -47,19 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
-    <Compile Include="ConfirmacaoCadastro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ConfirmacaoCadastro.Designer.cs">
-      <DependentUpon>ConfirmacaoCadastro.cs</DependentUpon>
-    </Compile>
     <Compile Include="ConsultaConta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConsultaConta.Designer.cs">
       <DependentUpon>ConsultaConta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Conta.cs" />
+    <Compile Include="Contas.cs" />
     <Compile Include="TelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,9 +70,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CadastrarCliente.resx">
       <DependentUpon>CadastrarCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ConfirmacaoCadastro.resx">
-      <DependentUpon>ConfirmacaoCadastro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaConta.resx">
       <DependentUpon>ConsultaConta.cs</DependentUpon>
