@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Conta
 {
-    public class Cliente
+    public abstract class Cliente
     {
         public String TipoDePessoa { get; set; }
         public String Nome { get; set; }
@@ -41,8 +42,13 @@ namespace Conta
                 + "\nSaldo: " + Numero.Saldo;
               
         }
-        
-        
+
+        public string ToTitleCase(string str)
+        {
+            return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(str.ToLower());
         }
+
+
+    }
     }
 

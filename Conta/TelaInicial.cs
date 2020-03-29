@@ -32,7 +32,7 @@ namespace Conta
         {
             CadastrarCliente novo = new CadastrarCliente();
             novo.Show();
-            //this.Visible = false;
+           // this.Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -44,6 +44,7 @@ namespace Conta
         {
             ConsultaConta novo = new ConsultaConta();
             novo.Show();
+            //this.Visible = false;
         }
     }
 }
