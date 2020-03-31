@@ -65,11 +65,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textDataDeNascimento = new System.Windows.Forms.MaskedTextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.textDataDeNascimento = new System.Windows.Forms.MaskedTextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -395,6 +395,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consultar Cliente";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(201, 30);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "Consultar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.textTelefone);
@@ -428,6 +437,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados do Cliente";
             // 
+            // textTelefone
+            // 
+            this.textTelefone.Location = new System.Drawing.Point(9, 187);
+            this.textTelefone.Mask = " (99) 00000 - 0000";
+            this.textTelefone.Name = "textTelefone";
+            this.textTelefone.Size = new System.Drawing.Size(162, 20);
+            this.textTelefone.TabIndex = 42;
+            // 
+            // textDataDeNascimento
+            // 
+            this.textDataDeNascimento.Location = new System.Drawing.Point(351, 110);
+            this.textDataDeNascimento.Mask = "00/00/0000";
+            this.textDataDeNascimento.Name = "textDataDeNascimento";
+            this.textDataDeNascimento.Size = new System.Drawing.Size(100, 20);
+            this.textDataDeNascimento.TabIndex = 42;
+            this.textDataDeNascimento.ValidatingType = typeof(System.DateTime);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label13);
@@ -446,32 +472,6 @@
             this.groupBox3.TabIndex = 43;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dados da Conta";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(201, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textDataDeNascimento
-            // 
-            this.textDataDeNascimento.Location = new System.Drawing.Point(351, 110);
-            this.textDataDeNascimento.Mask = "00/00/0000";
-            this.textDataDeNascimento.Name = "textDataDeNascimento";
-            this.textDataDeNascimento.Size = new System.Drawing.Size(100, 20);
-            this.textDataDeNascimento.TabIndex = 42;
-            this.textDataDeNascimento.ValidatingType = typeof(System.DateTime);
-            // 
-            // textTelefone
-            // 
-            this.textTelefone.Location = new System.Drawing.Point(9, 187);
-            this.textTelefone.Mask = " (99) 00000 - 0000";
-            this.textTelefone.Name = "textTelefone";
-            this.textTelefone.Size = new System.Drawing.Size(162, 20);
-            this.textTelefone.TabIndex = 42;
             // 
             // CadastrarCliente
             // 

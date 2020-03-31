@@ -46,42 +46,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cliente.cs" />
-    <Compile Include="ClientePessoaFisica.cs" />
-    <Compile Include="ClientePessoaJuridica.cs" />
-    <Compile Include="ConsultaConta.cs">
+    <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\ClientePessoaFisica.cs" />
+    <Compile Include="Entidades\ClientePessoaJuridica.cs" />
+    <Compile Include="Formularios\ConsultaConta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsultaConta.Designer.cs">
+    <Compile Include="Formularios\ConsultaConta.Designer.cs">
       <DependentUpon>ConsultaConta.cs</DependentUpon>
     </Compile>
-    <Compile Include="ContaCorrente.cs" />
-    <Compile Include="ContaInvestimento.cs" />
-    <Compile Include="ContaPoupanca.cs" />
-    <Compile Include="Contas.cs" />
-    <Compile Include="ITributos.cs" />
-    <Compile Include="Seguro.cs" />
-    <Compile Include="TelaInicial.cs">
+    <Compile Include="Entidades\ContaCorrente.cs" />
+    <Compile Include="Entidades\ContaInvestimento.cs" />
+    <Compile Include="Entidades\ContaPoupanca.cs" />
+    <Compile Include="Entidades\Contas.cs" />
+    <Compile Include="Entidades\Interfaces\ITributos.cs" />
+    <Compile Include="Entidades\Seguro.cs" />
+    <Compile Include="Formularios\TelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaInicial.Designer.cs">
+    <Compile Include="Formularios\TelaInicial.Designer.cs">
       <DependentUpon>TelaInicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="CadastrarCliente.cs">
+    <Compile Include="Formularios\CadastrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastrarCliente.Designer.cs">
+    <Compile Include="Formularios\CadastrarCliente.Designer.cs">
       <DependentUpon>CadastrarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CadastrarCliente.resx">
+    <EmbeddedResource Include="Formularios\CadastrarCliente.resx">
       <DependentUpon>CadastrarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConsultaConta.resx">
+    <EmbeddedResource Include="Formularios\ConsultaConta.resx">
       <DependentUpon>ConsultaConta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaInicial.resx">
+    <EmbeddedResource Include="Formularios\TelaInicial.resx">
       <DependentUpon>TelaInicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
